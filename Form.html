@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Uygulamam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="reset"],
+        input[type="submit"] {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="backend_dosyasi.php">
+        <label for="ad">Ad:</label>
+        <input type="text" name="ad" id="ad" placeholder="Örnek: SEZEN" required>
+        
+        <label for="soyad">Soyad:</label>
+        <input type="text" name="soyad" id="soyad" 
+        placeholder="Örnek: ATMIŞ" required>
+        
+        <label for="sifre">Şifre:</label>
+        <input type="text" name="sifre" id="sifre" 
+        placeholder="************" required maxlength="10">
+        
+        <label for="email">Mail:</label>
+        <input type="email" name="email" id="email" 
+        placeholder="Örnek: sezenatmis@gmail.com" required>
+        
+        <label for="tel">Telefon:</label>
+        <input type="tel" name="tel" id="tel" 
+        placeholder="Örnek: 5467660990" required>
+        
+        <label for="tarih">Tarih:</label>
+        <input type="date" name="tarih" id="tarih" required>
+        
+        <input type="reset" value="Sıfırla">
+        <input type="submit" value="Gönder">
+    </form>
+</body>
+</html>
